@@ -1,22 +1,12 @@
-import { Formik, Form, Field } from "formik";
-
+import React from "react";
+import { Header } from "./components/Header/Header";
+import { GlobalStyle } from "./styles/GlobalStyles";
 const App = () => {
   return (
-    <div>
-      <header>
-        <Formik
-          initialValues={{ search: "" }}
-          onSubmit={async (values) => {
-            //llamar a la api de unplash
-            console.log(values);
-          }}
-        >
-          <Form>
-            <Field name="search" />
-          </Form>
-        </Formik>
-      </header>
-    </div>
+    <>
+      <GlobalStyle />
+      <Header />
+    </>
   );
 };
 
